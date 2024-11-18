@@ -6,8 +6,10 @@ def luhn(number):
         sum += n * 2 % 10 + n * 2 // 10
     for n in card[-1::-2]:
         sum += n
-    return sum % 10
-
+    if sum % 0 == 0:
+        return True
+    else:
+        return False
 
 # Get card number
 card = ""
